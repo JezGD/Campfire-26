@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dk7u20rouh56s"]
+
+[ext_resource type="Script" uid="uid://cnisxtlyv7245" path="res://character_body_3d.gd" id="1_a202f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_noarx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a0tk4"]
+
+[node name="Node3D" type="Node3D" unique_id=562361057]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1997331967]
+transform = Transform3D(10.137273, -3.4607459e-10, -2.4020173e-11, 3.7199155e-09, 0.94306684, 0.13095777, -1.5609297e-11, -0.007917264, 15.599068, -0.05203098, 0.2842868, -0.02086103)
+mesh = SubResource("BoxMesh_noarx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1698792882]
+transform = Transform3D(10.137272, -3.4745382e-10, -1.4893326e-11, 3.7199162e-09, 0.94682515, 0.081198335, -1.5609295e-11, -0.007948813, 9.6719475, 6.8654747, 0.28428674, -0.020861024)
+mesh = SubResource("BoxMesh_noarx")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=2129659390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.504166, 0)
+script = ExtResource("1_a202f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1550151473]
+shape = SubResource("CapsuleShape3D_a0tk4")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1620541104]

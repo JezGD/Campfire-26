@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ckhxuanj7th46"]
+
+[ext_resource type="AudioStream" uid="uid://b8sl21t0c2yr6" path="res://Sounds/blipSelect.wav" id="1_fywep"]
+
+[node name="LevelSwitch" type="AudioStreamPlayer2D" unique_id=1330916381]
+stream = ExtResource("1_fywep")

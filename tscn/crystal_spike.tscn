@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://djjvw8qnqx2c1"]
+
+[ext_resource type="Texture2D" uid="uid://7gxrlocvubc5" path="res://Level 2 Sprite/crystalspikered.png" id="1_i4hcd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8u2a"]
+size = Vector2(17.062765, 16.937)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3tfi7"]
+size = Vector2(8, 8)
+
+[node name="CrystalSpike" type="StaticBody2D" unique_id=1981668656]
+rotation = -0.0036990321
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1792508294]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2124701839]
+position = Vector2(-0.4981461, -0.5018451)
+shape = SubResource("RectangleShape2D_w8u2a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=932691021]
+position = Vector2(9.536743e-07, 9.536743e-07)
+scale = Vector2(0.21940918, 0.21940918)
+texture = ExtResource("1_i4hcd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1366737944]
+shape = SubResource("RectangleShape2D_3tfi7")

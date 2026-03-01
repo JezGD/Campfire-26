@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ceakl1yxvt2q5"]
+
+[ext_resource type="Texture2D" uid="uid://du3f6ogrxiou4" path="res://Level 1 Sprite/Error.png" id="1_kv732"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkp8b"]
+size = Vector2(6, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20pc6"]
+size = Vector2(4, 9)
+
+[node name="NotSpike" type="StaticBody2D" unique_id=1299428891]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1108609003]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=144909717]
+shape = SubResource("RectangleShape2D_wkp8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=604410236]
+visible = false
+position = Vector2(2, -3)
+scale = Vector2(0.12988962, 0.13145825)
+texture = ExtResource("1_kv732")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=437573085]
+shape = SubResource("RectangleShape2D_20pc6")

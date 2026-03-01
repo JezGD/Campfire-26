@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cba4vt8taw64x"]
+
+[ext_resource type="AudioStream" uid="uid://snhyn4x2bh7v" path="res://in-parkour-civilization.mp3" id="1_6b3gw"]
+[ext_resource type="Script" uid="uid://rmyk1q8s2a2p" path="res://tscn/parkourciv.gd" id="1_8dv33"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dv33"]
+size = Vector2(96, 20)
+
+[node name="Area2D" type="Area2D" unique_id=415812054]
+script = ExtResource("1_8dv33")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=311073784]
+shape = SubResource("RectangleShape2D_8dv33")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=529428903]
+stream = ExtResource("1_6b3gw")

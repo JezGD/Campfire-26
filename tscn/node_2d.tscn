@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cujph2uchrf4d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
+size = Vector2(38, 38)
+
+[sub_resource type="Animation" id="Animation_wtcfe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0e48y"]
+resource_name = "new_animation"
+length = 10.0067
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333334, 7, 9.52),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 1000), Vector2(0, 100), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_epypp"]
+_data = {
+&"RESET": SubResource("Animation_wtcfe"),
+&"new_animation": SubResource("Animation_0e48y")
+}
+
+[node name="Node2D" type="Node2D" unique_id=782204683]
+position = Vector2(-13, -197)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=2081350840]
+
+[node name="ColorRect" type="ColorRect" parent="AnimatableBody2D" unique_id=68635612]
+offset_left = -5.0
+offset_top = -151.0
+offset_right = 35.0
+offset_bottom = -111.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=1357177087]
+position = Vector2(15, -130)
+shape = SubResource("RectangleShape2D_y32ns")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" unique_id=1088341763]
+libraries/ = SubResource("AnimationLibrary_epypp")
